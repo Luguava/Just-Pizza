@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--STYLESHEETS-->
+
+    <!-- reset stylesheet -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- masonry -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    
+    <!-- Bootstrap 
+    this link from https://getbootstrap.com/docs/5.3/getting-started/introduction/ 'quick start, Section 2' -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- https://michalsnik.github.io/aos/ -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- style -->
+    <link rel="stylesheet" href="css/about.css">
+    
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Questrial&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Just Pizza</title>
+</head>
+
+<body>
+
+     <header class="flex-row">
+        <!-- inside header there are 2 sections LOGO and NAVBAR -->
+         <div class="logo">
+            <img src="images/Logo.png" alt="Just pizza logo">
+         </div>
+         <nav class="desktopmenu">
+            <!-- shortcut:ul.flex-row>li*4 -->
+            <ul class="flex-row">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+         </nav>
+         <nav class="desktopmenuMobile">
+            <!-- shortcut:ul.flex-row>li*4 -->
+            <ul class="flex-row">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+         </nav>
+         <div class="mobilemenu">
+            
+            <!-- Icon for the hamburger -->
+            <ion-icon class="mobileopen" name="menu-outline" size="large"></ion-icon>
+            <!-- icon for the "close" button -->
+            <ion-icon class="mobileclose" name="close-outline" size="large"></ion-icon>
+
+         </div>
+
+     </header>
+
+     <!-- CONTENT -->
+     <main>
+
+      <!-- banner's width is 100% of screen -->
+      <section class="hero">
+
+          <div class="grid">
+              <div class="flex-content">
+                  <h1 style="text-align: center;">JUST (really good) PIZZA</h1>
+
+              </div>
+          </div>
+      </section>
+      <section class="grid two-col cta">
+        <div class="card grid-item" style="width: 100%;">
+          <img src="images/about.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-title">About us</h5>
+            <p class="card-text">Just Pizza, founded by Steven Che and Jan Natividad, opened in East Vancouver in August 2024. We wanted to create a pizza shop that feels familiar like your favourite chain but with fine dining quality.
+              Steven, with his fine dining experience working at Michelin-starred restaurants and a renowned sourdough bakery in Oslo, is back home in Vancouver to share his passion for food. His dedication to quality shines through in every slice.
+              Jan, a product marketer in tech, is obsessed with customer experience and storytelling. His goal is to wow every customer and to give back to the community he now calls home.
+              We, re driven by a shared purpose: to feed our community delicious food. When Vancouverites think of getting takeout, we want people to think of Just Pizza.
+              </p>
+            <a href="#" class="btn btn-primary">Find us</a>
+          </div>
+        </div>
+  
+        <!-- Grid container for masonry layout -->
+        <div class="masonry grid-item">
+          <div class="item item1"><img src="images/about2.jpeg"></div>
+          <div class="item item2"><img src="images/about3.png"></div>
+          <div class="item item3"><img src="images/about4.png"></div>
+          <div class="item item4"><img src="images/about5.png"></div>
+          <div class="item item5"><img src="images/about6.jpeg"></div>
+          <div class="item item6"><img src="images/about7.jpeg"></div>
+        </div>
+  
+      </section>
+      
+      <section class="one-col black-background">
+          <div class="grid">
+              <p class="grid-item">Just Pizza in East Vancouver serves elevated classic and adventurous toppings on a freshly made sourdough crust. We hope to become your go-to answer to the question, “What do you feel like eating?”</p>
+          </div>
+      
+      </section>
+      <section class="grid two-col cta">
+        <div class="grid-item borderredius">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.493430396343!2d-123.07368002244388!3d49.24809277320158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486770015545537%3A0x667c696904a1a168!2sJust%20Pizza!5e0!3m2!1szh-CN!2sca!4v1733867181536!5m2!1szh-CN!2sca" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="grid-item">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h2>Location</h2>
+              <p>1629 Kingsway</p><p>Vancouver, BC V5N 2S2</p><p>(604) 566-8888</p>
+              <br>
+              <h2>Hours of operation</h2>
+              <p>Tue - Sun: 12-9pm</p><p>Closed Mondays</p>
+              <br>
+              <h2>Join our team</h2>
+              <p>Send your resume to hello@justpizzaplease.ca</p>
+              <ion-icon name="logo-instagram" size="large"></ion-icon><ion-icon name="logo-tiktok" size="large"></ion-icon>
+            </div>
+          </div>
+        </div>        
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="flex-row">
+      <div class="logo footer">
+          <img src="images/logoicon.png" alt="Eden logo">
+        </div>
+        <nav class="desktopmenu">
+          <!-- shortcut:ul.flex-row>li*4 -->
+          <ul class="flex-row">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+      
+    </footer>
+
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+    <!-- this link from https://getbootstrap.com/docs/5.3/getting-started/introduction/ 'quick start, Section 2' -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 对应的function 一定要放在 script link 的后面 -->
+    <script>
+        AOS.init();
+    </script>
+    
+    <!-- mobile hamburger menu switch -->
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
