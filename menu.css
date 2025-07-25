@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* ===== BASE ===== */
+:root {
+    --black: #000;
+    --white: #fff;
+    --light: #f7f7f7;
+    --lightgreen: #EAF4EA;
+    --lightyellow: #FFF8DC;
+    --light-text: #7e9586;
+    --secondary: #E76F51;
+    --themeyellow: #F4A261;
+    --primary-accent: black;
+    --font-main: "Inter", sans-serif;
+    --font-accent: "Mali", cursive;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--lightyellow);
+    font-family: var(--font-main);
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.6;
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: var(--font-accent);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, var(--themeyellow), var(--primary-accent));
+    color: var(--white);
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  a {
+    font-family: var(--font-accent);
+    color: var(--primary-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: var(--secondary);
+  }
+  
+  /* ===== NAVIGATION ===== */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+  }
+  
+  nav a {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  }
+
+  .menu h2{
+    text-align: center;
+  }
+  .menu p{
+  text-align: center;
+  }
+  
+  /* ===== MENU PAGE CSS ===== */
+
+.carousel {
+    background: var(--white);
+    width: 70%;
+    margin: 3rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .carousel img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 0;
+  }
+  
+  /* ===== RESPONSIVE ===== */
+
+/* For smaller mobile devices (e.g., iPhones in portrait) - up to 480px */
+@media screen and (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* Adjust grid for small screens */
+        max-width: 100%;
+        gap: 10px; /* Reduce gap */
+    }
+
+    .two-col .grid-item,
+    .four-col .grid-item,
+    .one-col .grid-item {
+        grid-column: span 4; /* Stack columns on small screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller font for hero heading */
+        padding: 0.3em 0.6em; /* Adjust padding */
+    }
+
+    .hero {
+        height: 250px; /* Shorter banner for small screens */
+        background-image: url(/images/Banner2.jpeg); /* Using Banner2 for smaller screens as per original style.css snippet for 768px breakpoint. */
+    }
+
+    .flex-content {
+        grid-column: 1 / span 4; /* Full width for content in banner */
+        padding: 1rem; /* Smaller padding */
+    }
+
+    .icon-card {
+        height: 200px; /* Smaller height for icon cards */
+    }
+
+    .logo img {
+        max-width: 100px; /* Smaller logo */
+    }
+
+    .desktopmenu {
+        display: none; /* Hide desktop menu */
+    }
+
+    .mobilemenu {
+        display: flex; /* Show mobile menu icon */
+    }
+
+    .desktopmenuMobile {
+        /* Mobile menu specific styles, ensure it's hidden by default and shown with JS */
+        position: absolute;
+        top: 4.8em;
+        right: 0;
+        background-color: var(--themeyellow);
+        padding: 1em;
+        border-radius: 10px;
+        z-index: 1;
+        display: none; /* Hidden by default */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .desktopmenuMobile a {
+        font-size: 14px;
+    }
+}
+
+/* For larger mobile devices in landscape and small tablets (e.g., older iPads portrait) - 481px to 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(6, 1fr); /* Adjust grid for medium screens */
+        max-width: 700px; /* Max width for this breakpoint */
+        gap: 15px;
+    }
+
+    .two-col .grid-item {
+        grid-column: span 3; /* Two columns for these items */
+    }
+
+    .four-col .grid-item {
+        grid-column: span 3; /* Two columns for these items */
+    }
+
+    .one-col .grid-item {
+        grid-column: span 6; /* Full width for these items */
+    }
+
+    h1 {
+        font-size: 2rem; /* Medium font for hero heading */
+        padding: 0.4em 0.8em; /* Adjust padding */
+    }
+
+    .hero {
+        height: 300px; /* Medium banner height */
+        background-image: url(/images/Banner1.jpeg); /* Using Banner1 for medium screens as per original style.css snippet for 1024px breakpoint. */
+    }
+
+    .flex-content {
+        grid-column: 2 / span 4; /* Centered content in banner */
+        padding: 1.5rem;
+    }
+
+    .icon-card {
+        height: 250px; /* Medium height for icon cards */
+    }
+
+    .logo img {
+        max-width: 150px; /* Medium logo size */
+    }
+
+    .desktopmenu {
+        display: none; /* Still hide desktop menu */
+    }
+
+    .mobilemenu {
+        display: flex; /* Show mobile menu icon */
+    }
+    
+    .desktopmenuMobile {
+        /* Mobile menu specific styles, ensure it's hidden by default and shown with JS */
+        position: absolute;
+        top: 4.8em;
+        right: 0;
+        background-color: var(--themeyellow);
+        padding: 1em;
+        border-radius: 10px;
+        z-index: 1;
+        display: none; /* Hidden by default */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+/* For tablets in portrait mode (e.g., most iPads) - 769px to 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .grid {
+        gap: 16px;
+        max-width: 960px; /* Max width for this breakpoint */
+    }
+
+    .two-col .grid-item {
+        grid-column: span 6; /* Two columns for these items */
+    }
+
+    .four-col .grid-item {
+        grid-column: span 3; /* Four columns for these items */
+    }
+    
+    .one-col .grid-item {
+        grid-column: span 12; /* Full width for these items */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Larger font for hero heading */
+    }
+
+    .hero {
+        height: 350px; /* Taller banner */
+        background-image: url(/images/Banner.jpeg); /* Use default banner */
+    }
+
+    .flex-content {
+        grid-column: 3 / span 8; /* Centered content in banner */
+        padding: 2rem;
+    }
+
+    .icon-card {
+        height: 300px; /* Taller height for icon cards */
+    }
+
+    .logo img {
+        max-width: 180px; /* Standard logo size */
+    }
+
+    .desktopmenu {
+        display: flex; /* Show desktop menu */
+    }
+
+    .mobilemenu {
+        display: none; /* Hide mobile menu icon */
+    }
+
+    .desktopmenuMobile {
+        display: none !important; /* Ensure mobile menu is hidden */
+    }
+}
+
+/* For desktop screens (1025px and up) - default styles */
+@media screen and (min-width: 1025px) {
+    /* These are largely the default styles already defined, but good to explicitly state for clarity */
+    .grid {
+        max-width: 1280px;
+        gap: 20px;
+    }
+
+    .two-col .grid-item {
+        grid-column: span 6;
+    }
+
+    .one-col .grid-item {
+        grid-column: span 12;
+    }
+
+    .four-col .grid-item {
+        grid-column: span 3;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .hero {
+        height: 400px;
+        background-image: url(/images/Banner.jpeg);
+    }
+
+    .flex-content {
+        grid-column: 4 / span 6;
+        padding: 2rem;
+    }
+
+    .icon-card {
+        height: 400px;
+    }
+
+    .logo img {
+        max-width: 180px;
+    }
+
+    .desktopmenu {
+        display: flex; /* Ensure desktop menu is visible */
+    }
+
+    .mobilemenu {
+        display: none; /* Ensure mobile menu icon is hidden */
+    }
+
+    .desktopmenuMobile {
+        display: none !important; /* Ensure mobile menu is hidden */
+    }
+}
