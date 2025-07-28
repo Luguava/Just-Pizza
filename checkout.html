@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Pizza - Checkout</title>
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Questrial&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+        <header class="flex-row">
+            <div class="logo">
+            <a href="index.html"><img src="images/Logo.png" alt="Just pizza logo"></a>
+            </div>
+            <nav class="desktopmenu">
+            <ul class="flex-row">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+            </nav>
+            
+            <!-- This section is for the mobile menu -->
+            <nav class="desktopmenuMobile">
+                <ul class="flex-row">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+
+                </ul>
+            </nav>
+            <div class="mobilemenu">
+                <!-- Icon for the hamburger -->
+                <ion-icon class="mobileopen" name="menu-outline" size="large"></ion-icon>
+                <!-- icon for the "close" button -->
+                <ion-icon class="mobileclose" name="close-outline" size="large"></ion-icon>
+            </div>
+        </header>
+
+    <main class="checkout-page-wrapper">
+        <h1>Checkout</h1>
+        <div class="checkout-container">
+            <!-- Customer Information Form -->
+            <section class="customer-details">
+                <h2>Your Details</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup-time">Preferred Pickup Time</label>
+                        <input type="time" id="pickup-time" name="pickup-time" min="12:00" max="21:00" required>
+                        <small>Our hours are 12:00 PM - 9:00 PM</small>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Order Summary -->
+            <section class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="summary-items-container">
+                    <!-- Order items will be injected here -->
+                </div>
+                <div class="summary-total">
+                    <strong>Total:</strong>
+                    <span id="summary-total-price">$0.00</span>
+                </div>
+                <div id="checkout-error-message" class="error-message"></div>
+                <button type="submit" form="checkout-form" class="btn-place-order" >Place Order</button>
+            </section>
+        </div>
+    </main>
+
+    <footer class="flex-row">
+        <div class="logo footer"><img src="images/logoicon.png" alt="Eden logo"></div>
+         <nav class="desktopmenu">
+            <ul class="flex-row">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+         </nav>
+    </footer>
+
+    <script src="js/checkout.js"></script>
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Your mobile menu script -->
+    <script src="js/main.js"></script>
+</body>
+</html>

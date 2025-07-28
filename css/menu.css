@@ -1,0 +1,63 @@
+
+/* --- Background Helpers --- */
+.lightgreen-background { width: 100%; background-color: var(--lightgreen); }
+.lightyellow-background { width: 100%; background-color: var(--lightyellow); }
+.black-background{
+    color: #E7BA63;
+    width: 100%;
+    background-color: var(--black);
+}
+
+
+/* --- Add to Cart Button --- */
+.add-to-cart-btn { background-color: var(--themeyellow); color: var(--black); border: 2px solid var(--themeyellow); padding: 0.75em 1.5em; border-radius: 5px; font-weight: 700; cursor: pointer; transition: background-color 0.3s, color 0.3s; width: 100%; margin-top: auto; }
+.add-to-cart-btn:hover { background-color: var(--black); color: var(--themeyellow); }
+
+/* --- Cart Icon --- */
+
+/* ==========================================================================
+   4. Responsive Styles (Media Queries)
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+    .page-wrapper { flex-direction: column; }
+    .cart-container { max-width: 100%; margin-top: 2rem; }
+    .menu-group { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 834px) {
+    .logo img { max-width: 250px; }
+    h1 { font-size: 2rem; }
+    .grid { gap: 16px; max-width: 768px; }
+    .hero { height: 360px; background-image: url(/images/Banner1.jpeg); }
+    .hero .grid { height: 360px; }
+    .flex-content { grid-column: 4/span 6; }
+    .icon-card { height: 300px; }
+    .four-col .grid-item { grid-column: auto / span 6; }
+    h2 { font-size: 30px; }
+    p { font-size: large; }
+    .logo.footer img { max-width: 70px; }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-group { grid-template-columns: 1fr; }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img { max-width: 150px; }
+    .desktopmenu, .mobileclose { display: none; }
+    .mobilemenu { display: flex; }
+    .grid { grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 320px; }
+    .two-col .grid-item, .four-col .grid-item, .grid.two-col.cta .grid-item { grid-column: auto / span 4; }
+    h1 { font-size: 1.3rem; }
+    .hero { height: 300px; background-image: url(/images/Banner2.jpeg); }
+    .hero .grid { height: 300px; }
+    .flex-content { grid-column: 1 / span 4; }
+    .icon-card { height: 200px; }
+    h2 { font-size: large; }
+    p { font-size: small; }
+    br { display: none; }
+    .logo.footer img { max-width: 50px; }
+    .desktopmenuMobile { position: absolute; top: 4.8em; right: 0; background-color: #FFF8DC; padding: 1em; border-radius: 10px; z-index: 1; display: none; transform: translateX(100%); transition: transform 0.3s ease-in-out; }
+    .desktopmenuMobile a { font-size: 12px; }
+    .desktopmenuMobile.open { display: block; transform: translateX(0); }
+}
