@@ -108,7 +108,7 @@
 
     .hero {
         height: 250px; /* Shorter banner for small screens */
-        background-image: url(/images/Banner2.jpeg); /* Using Banner2 for smaller screens as per original style.css snippet for 768px breakpoint. */
+        background-image: url(../images/Banner2.jpeg); /* Using Banner2 for smaller screens as per original style.css snippet for 768px breakpoint. */
     }
 
     .flex-content {
@@ -178,7 +178,7 @@
 
     .hero {
         height: 300px; /* Medium banner height */
-        background-image: url(/images/Banner1.jpeg); /* Using Banner1 for medium screens as per original style.css snippet for 1024px breakpoint. */
+        background-image: url(../images/Banner1.jpeg); /* Using Banner1 for medium screens as per original style.css snippet for 1024px breakpoint. */
     }
 
     .flex-content {
@@ -242,7 +242,7 @@
 
     .hero {
         height: 350px; /* Taller banner */
-        background-image: url(/images/Banner.jpeg); /* Use default banner */
+        background-image: url(../images/Banner.jpeg); /* Use default banner */
     }
 
     .flex-content {
@@ -297,7 +297,7 @@
 
     .hero {
         height: 400px;
-        background-image: url(/images/Banner.jpeg);
+        background-image: url(../images/Banner.jpeg);
     }
 
     .flex-content {
@@ -326,3 +326,4 @@
     }
 
 }
+
