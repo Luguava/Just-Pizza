@@ -28,7 +28,7 @@
     .logo img { max-width: 250px; }
     h1 { font-size: 2rem; }
     .grid { gap: 16px; max-width: 768px; }
-    .hero { height: 360px; background-image: url(/images/Banner1.jpeg); }
+    .hero { height: 360px; background-image: url(../images/Banner1.jpeg); }
     .hero .grid { height: 360px; }
     .flex-content { grid-column: 4/span 6; }
     .icon-card { height: 300px; }
@@ -61,3 +61,4 @@
     .desktopmenuMobile a { font-size: 12px; }
     .desktopmenuMobile.open { display: block; transform: translateX(0); }
 }
+
