@@ -28,7 +28,7 @@
 /* .HERO */
 .hero{
     height: 400px;
-    background-image: url(/images/Banner.jpeg);
+    background-image: url(../images/Banner.jpeg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -324,4 +324,5 @@
     .desktopmenuMobile {
         display: none !important; /* Ensure mobile menu is hidden */
     }
+
 }
