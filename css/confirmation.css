@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Confirmation Page Styles
+   ========================================================================== */
+
+.confirmation-page-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.confirmation-page-wrapper h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    background-color: transparent;
+    text-shadow: none;
+}
+
+.confirmation-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.order-details-box {
+    background-color: var(--lightyellow);
+    border: 2px solid var(--themeyellow);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.order-details-box h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.customer-info-summary, .order-summary-final {
+    margin-bottom: 2rem;
+}
+
+.order-details-box h3 {
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--lightgreen);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.customer-info-summary p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#final-summary-items .summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.btn-back-to-menu {
+    display: inline-block;
+    background-color: var(--themeyellow);
+    color: var(--black);
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-back-to-menu:hover {
+    background-color: var(--black);
+    color: var(--themeyellow);
+}
